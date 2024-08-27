@@ -9,50 +9,68 @@ In cases where your class allocates dynamic memory or other resources, you shoul
 
 */
 
+
 #include<iostream>
+#include<bits/stdc++.h>
+
 using namespace std ; 
 
-class MyClass{
-    public:
-        int value ; 
 
-        MyClass(){
-            value = 0 ; 
+class Myclass1{
+    public : 
+        char data[100] ;
+
+
+        // Changed the setdata method parameter from char[] to const char[]: This allows you to pass string literals safely without modifying them.
+        void setdata(const char val[]){
+            strcpy(this->data , val) ; 
         }
 
-        MyClass(int val){
-            value = val ; 
-        }
-
-        MyClass operator+(MyClass & other){
-            this->value = this->value + other.value ; 
-        }
 
         void show(){
-            cout << "value is : " << value << endl; 
-        }
-        
-}; 
+            cout << data << endl; 
+        } 
+
+
+};
+
+
 
 
 int main(){
-    MyClass obj1(10) ; 
-    MyClass obj2(20) ; 
+    Myclass1 d1 ; 
+    
+    d1.setdata("ankit") ; 
 
-    obj1+obj2 ;  // value of obj1 + obj2  is stored in obj1 ; 
+    Myclass1 d2 ; 
+    d2.setdata("rahul") ; 
+    
+    d2.show() ; 
 
-    obj1.show() ;
-    obj2.show() ; 
+    d2 = d1 ; 
+
+    d1.show() ; 
+    d2.show() ; 
 
 
-    MyClass obj3(15) ; 
-    MyClass obj4(25) ; 
+    cout <<endl <<  "creating dynamic pointer" <<endl; 
+    // Problem : 
+    Myclass1* d3 = new Myclass1() ; 
+    d3->setdata("shayam") ; 
 
-    obj4 + obj3 ;  // value of obj4 + obj3 is stored in obj4 ; 
+    Myclass1* d4 = new Myclass1() ; 
+    d4 = d3 ; // Problem: d4 now points to the same memory as d3
 
-    obj3.show() ; 
-    obj4.show() ;  
+    d3->show(); // Outputs "shayam"
+    d4->show(); // Outputs "shayam" (since d4 points to d3)
+
+    d3->setdata("rawat") ;  // Changes data in the object that both d3 and d4 point to
+
+    d3->show(); // Outputs "rawat"
+    d4->show(); // Outputs "rawat" (d4 points to the same object as d3) 
+
 
 
 
 }
+
