@@ -20,6 +20,16 @@ class Hero{
             this->health = health ; 
         }
 
+        // constructor 
+
+        Hero(Hero& val){
+            name = new char[strlen(val.name) + 1] ; 
+            strcpy(name , val.name) ; 
+
+            this->level = val.level ; 
+            this->health = val.health ; 
+        }
+
         
        
 
@@ -60,15 +70,15 @@ int main(){
 
     hero1.print() ; 
 
-
+    // costumize constructor ; --> it is doing deep copy. 
     Hero hero2(hero1) ; 
     hero2.print() ; 
 
     char name2[12] = "rahul" ;
     hero2.setName(name2) ; 
 
-    hero2.print() ; 
     hero1.print() ; 
+    hero2.print() ; 
 
 
 
