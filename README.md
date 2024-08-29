@@ -19,7 +19,7 @@ To get started with this repository, clone it using the following command:
 
 ```bash
 git clone https://github.com/ankitrajlogin/Algorithm_cpp.git
-
+```
 
 ## Contribution
 If you would like to contribute to this repository:
