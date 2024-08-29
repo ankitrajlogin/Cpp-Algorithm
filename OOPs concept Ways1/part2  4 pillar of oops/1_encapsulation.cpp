@@ -4,11 +4,13 @@ Encapsulation is one of the four fundamental Object-Oriented Programming (OOP) p
 
 ********************************************************************
 
-Encapsulation also means restricting direct access to some of an object's components, which is a means of preventing accidental interference and misuse of the data. In essence, encapsulation provides a way to protect the internal state of an object from unwanted changes by restricting access to certain components (typically through access specifiers like private, protected, and public).
+--> Encapsulation is wrapping up of data & member functions in a single unit called class. 
+
+--> Encapsulation also means restricting direct access to some of an object's components, which is a means of preventing accidental interference and misuse of the data. In essence, encapsulation provides a way to protect the internal state of an object from unwanted changes by restricting access to certain components (typically through access specifiers like private, protected, and public).
 
 **************************************************************************
 
-Encapsulation in OOP is about wrapping data and the methods that operate on the data into a single unit, often restricting direct access to some of the object's components. This helps improve security, control, and maintainability while allowing for more flexibility in the internal implementation of a class.
+--> Encapsulation in OOP is about wrapping data and the methods that operate on the data into a single unit, often restricting direct access to some of the object's components. This helps improve security, control, and maintainability while allowing for more flexibility in the internal implementation of a class.
 
 
 

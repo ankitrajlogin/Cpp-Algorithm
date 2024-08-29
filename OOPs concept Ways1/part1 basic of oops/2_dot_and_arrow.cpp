@@ -13,6 +13,9 @@ The arrow operator is used to access members of a class or structure when you ha
 Syntax:
 pointer->member
 
+Other method 
+(*pointer).member ; 
+
 */
 
 #include<iostream>
@@ -40,6 +43,8 @@ int main(){
     Hero* hero2 = new Hero;
     hero2->name = "Batman";
     hero2->health = 80;
+
+    (*hero2).health = 90 ; 
     hero2->display();  // Accessing members using arrow operator
 
     // Cleanup dynamic memory

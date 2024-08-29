@@ -1,5 +1,9 @@
 
 /** 
+
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (often known as methods). It emphasizes the use of objects and classes to structure and manage code, making it easier to design, implement, and maintain complex software systems.
+
+
 What is a Class and an Object in OOP?
 Class:
 A class is a blueprint or template for creating objects. It defines a set of properties (attributes) and methods (functions) that the created objects can have. A class doesn't hold data itself but rather describes how the objects (instances) created from it should look and behave.
