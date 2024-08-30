@@ -5,6 +5,15 @@ An abstract class is a class that cannot be instantiated directly and is meant t
 Pure Virtual Function
 A pure virtual function is a function declared in an abstract class that has no implementation in that class and is marked with = 0 in C++. Derived classes must provide an implementation for this function.
 
+
+**************************************************************************
+Abstraction using Abstract Classes
+
+1. Abstract classes are used to provide a base class from which other classes can be derived ; 
+2. They cann't be instantiated and are meant to be inherited. 
+3. Abstract classes are typically used to define an interface for derived classes. 
+
+
 */
 
 
@@ -22,6 +31,10 @@ public:
 
     // Pure virtual function for calculating perimeter of the shape
     virtual double perimeter() const = 0;
+
+    void show(){
+        cout << "this is the show function  in abstract class" << endl; 
+    }
 
     // Virtual destructor
     virtual ~Shape() {}
@@ -46,6 +59,8 @@ public:
     double perimeter() const override {
         return 2 * 3.14159 * radius;
     }
+
+    
 };
 
 // Derived class implementing the Shape abstract class
@@ -79,7 +94,9 @@ int main() {
 
     shape2->draw();
     cout << "Area of Rectangle: " << shape2->area() << endl;
-    cout << "Perimeter of Rectangle: " << shape2->perimeter() << endl;
+    cout << "Perimeter of Rectangle: " << shape2->perimeter() << endl;\
+    
+    shape2->show() ;
 
     delete shape1;
     delete shape2;
