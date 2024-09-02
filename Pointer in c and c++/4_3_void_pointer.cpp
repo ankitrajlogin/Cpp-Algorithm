@@ -55,6 +55,8 @@ int main() {
 
     // Assigning different data types to void pointer
     ptr = &num;
+    cout << "value of Ptr is : " << ptr << endl; 
+    cout << "value of ptr+1 is just next address of ptr : " << ptr+1 << endl; 
     printValue(ptr, 'i');
 
     ptr = &pi;

@@ -11,19 +11,27 @@ Key Characteristics of String Literals:
 */
 
 #include<iostream>
+#include<bits/stdc++.h>
 
 using namespace std ; 
 
 int main(){
-    char greet[6] = "Hello" ; 
-    cout << greet << endl; 
 
-    greet[0] = 'B' ;
-    cout << greet << endl; 
+    // char c[20] = "Hello" ; // string gets stored in the space for array ; 
 
-    char* str = "Hello";  // String literal
-    cout << str << endl;       
-     
-    str[0] = 'h';         // Attempt to modify a read-only string literal
-    cout << str << endl;        
+    char *c = "Hello" ; // strings get stored as compile time constant , so can't get modifiy. 
+    /*
+    The warning you're seeing is due to the fact that you're trying to assign a string literal to a char* variable. In C++, string literals have a type of const char[], and modifying them is undefined behavior. This is why the compiler is warning you: ISO C++ forbids converting a string constant to 'char*'.
+    */
+
+   const char* str = "Hello";
+
+   cout << c << endl; 
+   cout << str << endl; 
+
+//    c[0] = 'A' ;  //  this is not allowed , error occure as crash ; 
+
+   cout << c << endl; 
+  
+         
 }

@@ -3,9 +3,10 @@
 
 using namespace std;
 
-void print(char c[]){
+void print(char c[]){ // it is call by reference. a pointer is created in it. 
     cout << "Printing the value 1 : " ; 
     cout << c << endl; 
+    c[0] = 'A' ;
 
     int i = 0 ; 
 
